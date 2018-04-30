@@ -1,6 +1,6 @@
 <?php
 //Hide Admin Bar
-// add_filter('show_admin_bar', '__return_false');
+ add_filter('show_admin_bar', '__return_false');
 
 add_action('init', 'evolution_remheadlink');
 function evolution_remheadlink()
