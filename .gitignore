@@ -1,0 +1,6 @@
+ARCHIVE/
+.DS_Store
+.htaccess
+node_modules
+uploads/
+.idea/
