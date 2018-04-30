@@ -27,3 +27,13 @@
        url('fonts/bold/myriad_bold.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Flaticon';
+  src:
+       url('fonts/flaticon/flaticon.eot'), /* IE9 Compat Modes */
+       url('fonts/flaticon/flaticon.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/flaticon/flaticon.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/flaticon/flaticon.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-style: normal;
+}

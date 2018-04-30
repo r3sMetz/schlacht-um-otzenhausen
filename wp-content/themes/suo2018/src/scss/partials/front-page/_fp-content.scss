@@ -1,0 +1,43 @@
+.fp-content {
+  // STD
+  height: 60vh;
+  margin-top: 25vh;
+  @include media-breakpoint-up(xl){
+    width: 90%;
+  }
+
+  // Squares
+  &-square {
+    height: 50%;
+    width: 50%;
+    transition: $btn-transition;
+    cursor: pointer;
+    &:hover{
+      color: $secondary;
+      text-shadow: 2px 4px rgba($primary,.5);
+    }
+
+    &:nth-child(1),&:nth-child(2){
+      border-bottom: 1px dashed rgba($white,.5);
+    }
+    &:nth-child(odd){
+      border-right:  1px dashed rgba($white,.5);
+    }
+  }
+
+  // Special Icons
+  .flaticon {
+    font-family: $CWO_flat;
+    &.bands:before {
+      content: '\f101';
+    }
+    &.anfahrt:before{
+      content: '\f100';
+    }
+
+    &.info:before{
+      content: '\f101';
+    }
+  }
+}
+
