@@ -4,7 +4,7 @@ const frontPage = (() => {
 			const self = $(event.currentTarget);
 			if(!self.hasClass('off')){
 				fadeOverlay.show(true,()=>{
-					window.location.href = `${defaults.base_url}/${self.data('link')}`;
+					window.location.href = self.data('link');
 				});
 			}
 		})
