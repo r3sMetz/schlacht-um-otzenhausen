@@ -8,3 +8,31 @@ body.bg-std{
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+#fadeOverlay {
+  background-color: $primary;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  h3{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 120%;
+    font-family: $CWO_bold;
+    line-height: 1.2;
+
+    .forwardInterupt{
+      display: inline-block;
+    }
+    opacity: 0;
+  }
+}

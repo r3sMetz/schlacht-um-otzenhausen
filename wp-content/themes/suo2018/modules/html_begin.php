@@ -7,3 +7,4 @@
     <?wp_head();?>
 </head>
 <body<?if(is_front_page())echo ' class="bg-std"';?>>
+<div id="fadeOverlay"></div>

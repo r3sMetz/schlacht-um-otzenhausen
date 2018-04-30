@@ -28,7 +28,9 @@ const paths = {
     scss: 'src/scss/**/*.scss',
     php: '**/*.php',
     scripts: ['src/js/*.js'],
-    plugins: [],
+    plugins: [
+    	'node_modules/jquery/dist/jquery.min.js'
+    ],
     css : []
 };
 

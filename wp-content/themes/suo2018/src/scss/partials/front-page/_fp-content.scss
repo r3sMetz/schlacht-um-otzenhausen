@@ -11,8 +11,8 @@
     height: 50%;
     width: 50%;
     transition: $btn-transition;
-    cursor: pointer;
-    &:hover{
+    &:not(.off):hover{
+      cursor: pointer;
       color: $secondary;
       text-shadow: 2px 4px rgba($primary,.5);
     }
