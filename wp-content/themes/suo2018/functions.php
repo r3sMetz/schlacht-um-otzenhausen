@@ -8,3 +8,7 @@ require('includes/wp_cleaner.php');
 
 // Theme Setup
 require('includes/theme-setup.php');
+
+// Controller
+require('includes/controller/global-controller.php');
+require('includes/controller/front-page-controller.php');

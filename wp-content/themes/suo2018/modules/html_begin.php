@@ -6,4 +6,4 @@
     <title><?bloginfo('name');?></title>
     <?wp_head();?>
 </head>
-<body>
+<body<?if(is_front_page())echo ' class="bg-std"';?>>

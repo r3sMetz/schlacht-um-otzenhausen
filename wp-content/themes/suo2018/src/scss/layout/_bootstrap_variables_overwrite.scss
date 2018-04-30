@@ -1,0 +1,23 @@
+// Colors
+$primary: $CWO_black;
+$secondary: $CWO_darkRed;
+
+// Body
+$white:    $CWO_white;
+$black:    $CWO_black;
+$body-bg:  $black;
+$body-color:  $white;
+
+// Fonts
+$font-family-base: $CWO_regular;
+
+// Buttons
+$btn-border-radius:           0;
+$btn-border-radius-lg:        0;
+$btn-border-radius-sm:        0;
+
+// Links
+$link-color:                $secondary;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     none;

@@ -1,6 +1,19 @@
+// Fonts
+@import "layout/fonts";
+
 // Variables
-@import "globals/variables";
+@import "layout/variables";
+
+// Font Awesome
+@import "layout/fontawesome_variables_overwrite";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 
 // Bootstrap
-@import "globals/bootstrap_variables_overwrite";
+@import "layout/bootstrap_variables_overwrite";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "layout/bootstrap_class_overwrite";
+@import "layout/bootstrap_additional_classes";
+
+// Globals
+@import "layout/normalize";
+@import "layout/layout";

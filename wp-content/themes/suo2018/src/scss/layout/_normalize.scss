@@ -1,0 +1,8 @@
+a:focus{
+  outline: 0 !important;
+}
+
+::selection {
+    color: $CWO_darkRed !important;
+    background:  $CWO_white !important;
+}

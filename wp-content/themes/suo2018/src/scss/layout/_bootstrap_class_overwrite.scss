@@ -1,0 +1,18 @@
+// Font
+.font-weight-bold {
+  font-family: $CWO_bold;
+  font-weight: $font-weight-normal;
+}
+
+// Headlines
+h1,h2,h3,h4,h5,h6{
+  font-family: $CWO_heat;
+  text-transform: uppercase;
+}
+
+// Buttons
+.btn{
+  font-family: $CWO_heat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
