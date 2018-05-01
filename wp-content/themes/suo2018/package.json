@@ -22,6 +22,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "jquery": "^3.3.1",
-    "postcss-flexbugs-fixes": "^3.3.0"
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "reframe.js": "^2.2.1"
   }
 }

@@ -14,4 +14,8 @@ require('includes/theme-setup.php');
 
 // Controller
 require('includes/controller/global-controller.php');
+require('includes/controller/query-controller.php');
 require('includes/controller/front-page-controller.php');
+
+// Posttypes
+require('includes/posttype_bands.php');

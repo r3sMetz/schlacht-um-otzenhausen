@@ -7,6 +7,9 @@ const main = (() => {
 
 		// FrontPage
 		if($('.fp-content')) frontPage.setup();
+
+		// Reframe Iframes
+		$('iframe').reframe();
 	}
 
 	return {

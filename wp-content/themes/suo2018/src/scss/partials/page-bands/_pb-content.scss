@@ -1,0 +1,22 @@
+.single_band{
+  width: 100%;
+}
+.pb_headliners{
+  @include media-breakpoint-up(md){
+    width: 85%;
+  }
+  .single_band{
+    @include media-breakpoint-up(md) {
+      width: 45%;
+    }
+  }
+}
+
+.pb_normals{
+    width: 90%;
+  .single_band{
+    @include media-breakpoint-up(md){
+      width: 30%;
+    }
+  }
+}

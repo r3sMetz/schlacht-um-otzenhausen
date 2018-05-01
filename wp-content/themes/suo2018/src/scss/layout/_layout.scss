@@ -9,6 +9,10 @@ body.bg-std{
   background-repeat: no-repeat;
 }
 
+.top_gap{
+  margin-top: 6rem;
+}
+
 #fadeOverlay {
   background-color: $primary;
   z-index: 9999;
@@ -35,4 +39,8 @@ body.bg-std{
     }
     opacity: 0;
   }
+}
+
+.underlined{
+  border-bottom: 1px solid $white;
 }
