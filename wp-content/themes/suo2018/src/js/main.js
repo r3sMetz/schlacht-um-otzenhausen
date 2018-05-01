@@ -2,7 +2,10 @@ const main = (() => {
 	function setup(){
 		console.log("main.js");
 
-		//FrontPage
+		// FadeOverlay
+		fadeOverlay.setClickEvents();
+
+		// FrontPage
 		if($('.fp-content')) frontPage.setup();
 	}
 

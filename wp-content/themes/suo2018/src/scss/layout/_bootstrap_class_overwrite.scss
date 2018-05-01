@@ -5,9 +5,9 @@
 }
 
 // Headlines
-h1,h2,h3,h4,h5,h6{
-  font-family: $CWO_heat;
-  text-transform: uppercase;
+h1,h2,h3,h4,h5,h6,.nav-link,.navbar-brand{
+  font-family: $CWO_heat !important;
+  text-transform: uppercase !important;
 }
 
 // Buttons
@@ -15,4 +15,25 @@ h1,h2,h3,h4,h5,h6{
   font-family: $CWO_heat;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+// Navigation
+a.nav-link,a.navbar-brand {
+  transition: $btn-transition;
+}
+
+a.nav-link{
+  @include media-breakpoint-up(md){
+    font-size: $h3-font-size;
+  }
+}
+a.navbar-brand{
+  color: $white !important;
+  font-size: $display4-size*.45;
+  @include media-breakpoint-up(md){
+    font-size: $display4-size*.75;
+  }
+  &:hover{
+    color: $secondary !important;
+  }
 }
