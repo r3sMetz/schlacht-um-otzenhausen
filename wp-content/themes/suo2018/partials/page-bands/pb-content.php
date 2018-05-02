@@ -4,7 +4,7 @@
     <div class="pb_headliners d-md-flex mx-auto align-items-center justify-content-between flex-wrap">
         <?php foreach($bandarray['headliner'] as $band):?>
         <div class="single_band mb-5 mb-md-2">
-            <img class="img-fluid" src="<?=get_field('logo',$band->ID)['url'];?>" alt="Title">
+            <img class="img-fluid" src="<?=get_field('logo',$band->ID)['url'];?>" alt="<?=$band->post_title;?>">
         </div>
         <?php endforeach;?>
     </div>
@@ -12,7 +12,7 @@
     <div class="pb_normals d-flex mx-auto align-items-center justify-content-between flex-wrap">
         <?php foreach($bandarray['normal'] as $band):?>
         <div class="single_band mb-5 mb-md-2">
-            <img class="img-fluid" src="<?=get_field('logo',$band->ID)['url'];?>" alt="Title">
+            <img class="img-fluid" src="<?=get_field('logo',$band->ID)['url'];?>" alt="<?=$band->post_title;?>">
         </div>
         <?php endforeach;?>
     </div>
