@@ -13,7 +13,7 @@
 			<div class="col-md-6">
 			    <?$last_post = get_last_post();?>
 				<h2 class="underlined">News</h2>
-				<p><?=date('d.m.Y',strtotime($last_post->post_date));?>:</p>
+				<p class="mb-0 text-muted"><?=date('d.m.Y',strtotime($last_post->post_date));?>:</p>
 				<p><?=$last_post->post_content;?></p>
 			</div>
 		</div>
