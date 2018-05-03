@@ -8,7 +8,7 @@ function theme_styles(){
     // Custom Styles
     wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css');
         $bg = get_field('hintergrundbild','options');
-	    wp_add_inline_style('styles','body{background-image:url('.$bg['url'].')}');
+	    wp_add_inline_style('styles','@media screen and (min-width: 992px){body{background-image:url('.$bg['url'].')}}');
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 

@@ -11,7 +11,7 @@ const frontPage = (() => {
 
 		const orientationRef = device.isMobile ? 'orientationchange' : 'resize';
 		$(window).on(orientationRef,()=>{
-			$(body).css('height',device.height());
+			$('body').css('height',device.height());
 		})
 	}
 
