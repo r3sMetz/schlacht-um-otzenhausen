@@ -7,6 +7,11 @@ const frontPage = (() => {
 					window.location.href = self.data('link');
 				});
 			}
+		});
+
+		const orientationRef = device.isMobile ? 'orientationchange' : 'resize';
+		$(window).on(orientationRef,()=>{
+			$(body).css('height',device.height());
 		})
 	}
 
