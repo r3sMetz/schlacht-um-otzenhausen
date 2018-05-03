@@ -2,7 +2,7 @@
 .display-huge{
   line-height: .825;
   font-size: $h1-font-size;
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     font-size: $display2-size;
   }
 }
