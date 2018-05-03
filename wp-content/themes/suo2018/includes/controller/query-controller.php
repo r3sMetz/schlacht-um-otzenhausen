@@ -15,6 +15,11 @@ function r3_query($post_type,$orderBy='title',$order='ASC',$postsPerPage = -1) {
         'order'          => $order
     );
 
+    if($orderBy!='title') {
+	    $args['meta_key'] = $orderBy;
+	    $args['orderby'] = 'meta_value';
+    }
+
     $query = new WP_query($args);
 
     if($query->have_posts()){
@@ -50,4 +55,33 @@ function build_band_array(){
 	}
 
 	return $return_array;
+}
+
+function build_running_order(){
+	// Get all Bands
+	$all_bands = r3_query('bands','startzeit');
+
+	// Put Bands after 0:00 to the End of the Array
+	foreach($all_bands as $key => $band){
+		$reftime = strtotime('12:00');
+		$bandtime = strtotime(get_field('startzeit',$band->ID));
+		if($bandtime<$reftime){
+			$shifted = array_shift($all_bands);
+			array_push($all_bands,$band);
+		}
+	}
+
+	// Put Bands to Their Stage
+	$staged_bands = array(
+		'mainstage' => array(),
+		'clubstage' => array()
+	);
+	foreach($all_bands as $band){
+		if(get_field('buhne',$band->ID) == 'Mainstage')
+			array_push($staged_bands['mainstage'],$band);
+		else
+			array_push($staged_bands['clubstage'],$band);
+	}
+
+	return $staged_bands;
 }
