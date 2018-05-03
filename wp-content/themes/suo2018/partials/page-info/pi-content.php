@@ -4,8 +4,8 @@
 			<div class="col-md-6">
 				<h2 class="underlined">FAQ</h2>
 				<?while(have_rows('faq')):the_row();?>
-				    <div class="faq_question">
-                        <h3 class="h4"><?the_sub_field('frage');?></h3>
+				    <div class="faq_question mb-4">
+                        <h3 class="h4 mb-0"><?the_sub_field('frage');?></h3>
                         <?the_sub_field('antwort');?>
                     </div>
 				<?endwhile;?>
