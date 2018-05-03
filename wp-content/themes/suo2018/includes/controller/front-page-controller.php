@@ -38,5 +38,5 @@ function build_item_options($item){
 }
 
 function get_headline($item,$addition_text){
-	return $item->title.' ( <small>'.$addition_text.'</small> )';
+	return $item->title.' <br class="d-none-md">( <small>'.$addition_text.'</small> )';
 }

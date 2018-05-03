@@ -1,5 +1,8 @@
 .fp-header{
-  height: 25vh;
+  height: 20vh;
+  @include media-breakpoint-up(lg){
+    height: 25vh;
+  }
   @media screen and (min-width: 1500px) {
     height: 20vh;
   }
