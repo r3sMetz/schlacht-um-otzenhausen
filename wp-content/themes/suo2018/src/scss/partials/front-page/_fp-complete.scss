@@ -1,9 +1,17 @@
+.fp-header{
+  height: 25vh;
+  @media screen and (min-width: 1500px) {
+    height: 20vh;
+  }
+}
 .fp-content {
   // STD
-  height: 60vh;
-  margin-top: 25vh;
+  height: 58vh;
   @include media-breakpoint-up(xl){
     width: 90%;
+  }
+  @media screen and (min-width: 1500px) {
+    height: 63vh;
   }
 
   // Squares
@@ -38,6 +46,14 @@
     &.info:before{
       content: '\f101';
     }
+  }
+}
+
+.fp-footer{
+  height: 17vh;
+  padding-top: 4vh;
+  @media screen and (min-width: 1500px) {
+    padding-top: 7vh;
   }
 }
 
