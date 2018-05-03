@@ -6,5 +6,5 @@
     <title><?bloginfo('name');?> | <?=!is_front_page() ? get_the_title() : 'Startseite';?></title>
     <?wp_head();?>
 </head>
-<body<?if(is_front_page())echo ' class="bg-std"';?>>
+<body class="bg-std<?if(is_front_page())echo' full-bg';?>">
 <div id="fadeOverlay"></div>

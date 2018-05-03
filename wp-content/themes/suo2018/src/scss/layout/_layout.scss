@@ -1,4 +1,4 @@
-body.bg-std{
+body.full-bg{
   height: 100vh;
   overflow: hidden;
 }
@@ -6,7 +6,7 @@ body.bg-std{
 .bg-std{
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  //background-repeat: no-repeat;
 }
 
 .top_gap{
