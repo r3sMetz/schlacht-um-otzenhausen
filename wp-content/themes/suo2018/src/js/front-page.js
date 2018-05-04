@@ -9,10 +9,14 @@ const frontPage = (() => {
 			}
 		});
 
+		setBodyHeight();
+
 		const orientationRef = device.isMobile ? 'orientationchange' : 'resize';
-		$(window).on(orientationRef,()=>{
-			$('body').css('height',device.height());
-		})
+		$(window).on(orientationRef,setBodyHeight);
+	}
+
+	function setBodyHeight(){
+		$('body').css('height',device.height());
 	}
 
 	return {
