@@ -1,4 +1,4 @@
-<div class="page-impressum_content puffer-both-xl">
+<div class="page-impressum_content">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">

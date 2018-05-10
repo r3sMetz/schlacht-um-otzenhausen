@@ -6,7 +6,7 @@ get_template_part('modules/html_begin');
 get_template_part('modules/navbar');
 
 // Page Content
-get_template_part('partials/page-impressum/page-impressum_content.php');
+get_template_part('partials/page-impressum/page-impressum_content');
 
 // Footer
 get_template_part('modules/footer');
