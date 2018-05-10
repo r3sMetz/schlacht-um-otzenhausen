@@ -5,6 +5,7 @@ require('includes/options_page.php');
 
 // Clean WordPress
 require('includes/wp_cleaner.php');
+require('includes/clearBackend.php');
 
 // Menues
 require('includes/menues.php');
