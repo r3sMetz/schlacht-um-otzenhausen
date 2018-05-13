@@ -20,11 +20,11 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h2 class="underlined"><?the_field('video_1_headline');?></h2>
-				<?the_field('video_1');?>
+				<?=clean_iframe(get_field('video_1'));?>
 			</div>
 			<div class="col-md-6">
 				<h2 class="underlined"><?the_field('video2_headline');?></h2>
-				<?the_field('video_2');?>
+				<?=clean_iframe(get_field('video_2'));?>
 			</div>
 		</div>
 	</div>
