@@ -20,3 +20,12 @@
     }
   }
 }
+
+.pb-link{
+  transition: all 300ms ease-out;
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 32px 16px rgba($black,.1);
+    background-color: rgba($black,.1);
+  }
+}
