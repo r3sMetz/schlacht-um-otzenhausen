@@ -10,6 +10,9 @@ const main = (() => {
 
 		// Reframe Iframes
 		$('iframe').reframe();
+
+		// Page Tickets
+		if($('.page-tickets-content').length) pageTickets.setup();
 	}
 
 	return {
