@@ -47,7 +47,7 @@ gulp.task('sass',() =>{
 
 gulp.task('compress', () => {
     gulp.src(paths.scripts)
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('scripts.min.v2.js'))
 		.pipe(babel({presets: ['env']}))
         .pipe(uglify())
         .pipe(gulp.dest('assets/js'))

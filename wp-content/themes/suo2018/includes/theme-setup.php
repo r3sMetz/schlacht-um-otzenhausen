@@ -21,7 +21,7 @@ function theme_scripts(){
 	wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.min.js',null,null,true);
 
     // Custom Script
-    wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts.min.js',null,null,true);
+    wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts.min.v2.js',null,null,true);
     /*wp_localize_script('scripts','defaults',array(
         //'base_url'               => home_url(),
         //'page_id'                => get_the_ID(),
