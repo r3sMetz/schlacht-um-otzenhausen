@@ -4,13 +4,6 @@
       font-size: $h2-font-size;
       width: 40px;
     }
-    a {
-      color: white;
-      transition: $btn-transition;
-      &:hover{
-        color: $secondary
-      }
-    }
     span{
       position: relative;
       bottom: 5px;
