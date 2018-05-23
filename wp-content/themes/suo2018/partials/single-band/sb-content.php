@@ -23,7 +23,7 @@
             <ul class="list-unstyled d-inline-block  text-left sb-content-list">
             <?foreach(get_field('links') as $link):?>
                 <li class="mb-2">
-                    <a href="<?=$link['url'];?>" class="d-inline-block" target="_blank">
+                    <a href="<?=$link['url'];?>" class="d-inline-block btn btn-secondary btn-lg w-100" target="_blank">
                     <i class="fa fa-<?=$link['type']['value'];?>"></i>
                     <span>
                     <?=$link['type']['value'] == 'globe' ? 'Website von '.strtoupper(get_the_title()) : strtoupper(get_the_title()).' auf '.$link['type']['label'];?>
