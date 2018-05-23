@@ -5,5 +5,5 @@ function get_event_date(){
 }
 
 function clean_iframe($iframe){
-	return '<iframe width="640" height="360" src="'.$iframe.'"></iframe>';
+	return '<iframe width="640" height="360" src="'.$iframe.'" allowfullscreen></iframe>';
 }
