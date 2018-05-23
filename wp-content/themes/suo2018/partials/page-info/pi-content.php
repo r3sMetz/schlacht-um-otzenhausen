@@ -11,10 +11,26 @@
 				<?endwhile;?>
 			</div>
 			<div class="col-md-6">
-			    <?$last_post = get_last_post();?>
-				<h2 class="underlined">News</h2>
-				<p class="mb-0 text-muted"><?=date('d.m.Y',strtotime($last_post->post_date));?>:</p>
-				<?=wpautop($last_post->post_content);?>
+                <div class="row">
+                    <div class="col-12">
+						<? $last_post = get_last_post(); ?>
+                        <h2 class="underlined">News</h2>
+                        <p class="mb-0 text-muted"><?= date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</p>
+						<?= wpautop( $last_post->post_content ); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="underlined">Downloads</h2>
+                        <?if(have_rows('downloads_bearbeiten')):?>
+                            <?php foreach(get_field('downloads_bearbeiten') as $download):?>
+                                <a href="<?=$download['download'];?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
+                                    <i class="fa fa-download"></i> <?=$download['name'];?>
+                                </a>
+                            <?php endforeach;?>
+                        <?php endif;?>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<div class="row">
