@@ -19,18 +19,18 @@
 						<?= wpautop( $last_post->post_content ); ?>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="underlined">Downloads</h2>
-                        <?if(have_rows('downloads_bearbeiten')):?>
+                <?if(have_rows('downloads_bearbeiten')):?>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="underlined">Downloads</h2>
                             <?php foreach(get_field('downloads_bearbeiten') as $download):?>
                                 <a href="<?=$download['download'];?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
                                     <i class="fa fa-download"></i> <?=$download['name'];?>
                                 </a>
                             <?php endforeach;?>
-                        <?php endif;?>
+                        </div>
                     </div>
-                </div>
+                <?php endif;?>
 			</div>
 		</div>
 		<div class="row">
