@@ -7,3 +7,18 @@ function get_event_date(){
 function clean_iframe($iframe){
 	return '<iframe width="640" height="360" src="'.$iframe.'" allowfullscreen></iframe>';
 }
+
+function notTooLongBandName($bandname){
+	if(strlen($bandname) >= 18){
+		$output = "";
+		$bandname_as_array = explode(' ',$bandname);
+
+		foreach($bandname_as_array as $word)
+			$output.=$word[0];
+
+		return strtoupper($output);
+	}
+	else {
+		return $bandname;
+	}
+}
