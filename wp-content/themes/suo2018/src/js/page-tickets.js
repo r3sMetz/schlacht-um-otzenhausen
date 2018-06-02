@@ -18,14 +18,22 @@ const pageTickets = (function(){
 		fadeOverlay.show(true,()=>{window.location.href=lastPage});
 	}
 
+	function goToPage() {
+		window.clearInterval(options.currentInterval);
+		fadeOverlay.show(true, () => {
+			window.location.href = options.shopLink
+		});
+	}
+
 	/** Public **/
 	function setup(){
 		// Initialize Seconds + Set CurrentTime
 		options.current_time = options.initial_time;
 		options.secondInterface.html(options.initial_time);
 
-		// Click Event
+		// Click Events
 		$('#abort_ticket').on('click',abort);
+		$('#catchUp').on('click',goToPage);
 
 		// Start Interval
 		options.currentInterval = setInterval(()=>{
@@ -34,10 +42,8 @@ const pageTickets = (function(){
 			options.secondInterface.html(options.current_time);
 
 			// On End go To Ticketing
-			if(options.current_time <= 0){
-				window.clearInterval(options.currentInterval);
-				fadeOverlay.show(true,()=>{window.location.href=options.shopLink});
-			}
+			if(options.current_time <= 0)
+				goToPage()
 
 		},1000)
 	}
