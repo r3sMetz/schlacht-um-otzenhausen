@@ -1,7 +1,7 @@
 const pageTickets = (function(){
 	/** Private **/
 	const options = {
-		initial_time: 5,
+		initial_time: document.referrer.includes(defaults.home_url) ? 10 : 5,
 		current_time: null,
 		secondInterface: $('#ticket_secs'),
 		currentInterval: null,
