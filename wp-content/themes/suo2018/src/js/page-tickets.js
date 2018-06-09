@@ -14,7 +14,8 @@ const pageTickets = (function(){
 			window.clearInterval(options.currentInterval);
 
 
-		const lastPage = 'https://suo-festival.de/';
+		let lastPage = document.referrer.includes(defaults.home_url) ? document.referrer : defaults.home_url;
+
 		fadeOverlay.show(true,()=>{window.location.href=lastPage});
 	}
 
