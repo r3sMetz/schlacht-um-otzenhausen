@@ -25,3 +25,4 @@ require('includes/post_saved.php');
 
 // Posttypes
 require('includes/posttype_bands.php');
+require('includes/posttype_news.php');
