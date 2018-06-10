@@ -30,7 +30,7 @@
     <!-- Running Order PDF -->
     <div class="row">
         <div class="col-12">
-            <a target="_blank" href="<?php echo get_template_directory_uri();?>/assets/pdf/suo_running_order.pdf" class="btn btn-secondary">Running Order als PDF</a>
+            <a target="_blank" href="<?php echo get_template_directory_uri();?>/assets/pdf/suo_running_order.pdf" class="btn btn-secondary btn-lg">Running Order als PDF</a>
         </div>
     </div>
 </div>
