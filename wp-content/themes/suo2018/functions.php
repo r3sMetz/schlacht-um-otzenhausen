@@ -1,4 +1,6 @@
 <?php
+//Composer
+require 'vendor/autoload.php';
 
 // ACF Options Page
 require('includes/options_page.php');
@@ -17,6 +19,9 @@ require('includes/theme-setup.php');
 require('includes/controller/global-controller.php');
 require('includes/controller/query-controller.php');
 require('includes/controller/front-page-controller.php');
+
+//Post Saved
+require('includes/post_saved.php');
 
 // Posttypes
 require('includes/posttype_bands.php');
