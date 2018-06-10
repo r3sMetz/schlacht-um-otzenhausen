@@ -1,6 +1,6 @@
 <?php
-function get_last_post(){
-	$posts = get_posts();
+function get_last_news(){
+	$posts = r3_query('news');
 	return $posts[0];
 }
 

@@ -15,7 +15,7 @@
 			<div class="col-md-6">
                 <div class="row">
                     <div class="col-12">
-						<? $last_post = get_last_post(); ?>
+						<? $last_post = get_last_news(); ?>
                         <h2 class="underlined">News</h2>
                         <p class="mb-0 text-muted"><?= date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</p>
 						<?= wpautop( $last_post->post_content ); ?>
