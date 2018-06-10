@@ -23,7 +23,7 @@ function theme_scripts(){
     // Custom Script
     wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts.min.v2.js',null,null,true);
     wp_localize_script('scripts','defaults',array(
-        'home_url'               => home_url(),
+        //'home_url'               => home_url(),
         //'page_id'                => get_the_ID(),
         //'template_directory_uri' => get_template_directory_uri(),
         //'template_directory'     => get_template_directory(),
@@ -37,11 +37,11 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 /**
 * Remove all type-attributes from style and script-tags
 */
-add_filter('style_loader_tag', 'myplugin_remove_type_attr',10, 2);
-add_filter('script_loader_tag', 'myplugin_remove_type_attr', 10, 2);
-
-function myplugin_remove_type_attr($tag, $handle) {
-    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
-}
+//add_filter('style_loader_tag', 'myplugin_remove_type_attr',10, 2);
+//add_filter('script_loader_tag', 'myplugin_remove_type_attr', 10, 2);
+//
+//function myplugin_remove_type_attr($tag, $handle) {
+//    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+//}
 
 
