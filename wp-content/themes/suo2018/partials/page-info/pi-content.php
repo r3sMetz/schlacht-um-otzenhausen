@@ -33,7 +33,7 @@
                             <?php endforeach;?>
                             <?php if(file_exists(get_template_directory().'/assets/pdf/suo_running_order.pdf')):?>
                                 <a href="<?=get_template_directory_uri().'/assets/pdf/suo_running_order.pdf';?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
-                                    <i class="fa fa-download"></i> <?=$download['name'];?>
+                                    <i class="fa fa-download"></i> Running Order
                                 </a>
                             <?php endif;?>
                         </div>
