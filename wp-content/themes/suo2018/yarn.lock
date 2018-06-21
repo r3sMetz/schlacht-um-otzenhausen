@@ -19,6 +19,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+"animate.css@>= 3.0.0", animate.css@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.6.1.tgz#4ea8a48556378bc8d7535224296c4c0dac9229de"
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -2226,7 +2230,7 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jquery@^3.3.1:
+"jquery@>= 1.6.2", jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -2315,6 +2319,12 @@ lcid@^1.0.0:
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
   dependencies:
     invert-kv "^1.0.0"
+
+"letteringjs@>= 0.6.1":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/letteringjs/-/letteringjs-0.7.0.tgz#a9f02ed8265b44a78c0478ec5b019bf0884fb582"
+  dependencies:
+    jquery ">= 1.6.2"
 
 liftoff@^2.1.0:
   version "2.5.0"
@@ -3735,6 +3745,14 @@ tar@^4:
     mkdirp "^0.5.0"
     safe-buffer "^5.1.1"
     yallist "^3.0.2"
+
+textillate@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/textillate/-/textillate-0.4.1.tgz#543e7461ca58ce453546be668b27f79c502fb501"
+  dependencies:
+    animate.css ">= 3.0.0"
+    jquery ">= 1.6.2"
+    letteringjs ">= 0.6.1"
 
 through2@2.0.3, through2@^2.0.0:
   version "2.0.3"
