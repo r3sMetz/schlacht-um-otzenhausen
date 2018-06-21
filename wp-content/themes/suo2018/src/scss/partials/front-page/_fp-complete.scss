@@ -6,6 +6,12 @@
   @media screen and (min-width: 1500px) {
     height: 20vh;
   }
+
+  /*h1{
+    animation: floating;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+  }*/
 }
 .fp-content {
   // STD
@@ -65,6 +71,18 @@
   }
   @media screen and (min-width: 1500px) {
     padding-top: 7vh;
+  }
+}
+
+@keyframes floating {
+  0%{
+    color: $CWO_white
+  }
+  50%{
+    color: $CWO_darkRed
+  }
+  100%{
+    color: $CWO_white
   }
 }
 
