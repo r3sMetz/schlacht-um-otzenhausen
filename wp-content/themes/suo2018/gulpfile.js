@@ -31,7 +31,8 @@ const paths = {
     plugins: [
     	'node_modules/jquery/dist/jquery.min.js',
     	'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-    	'node_modules/reframe.js/dist/jquery.reframe.min.js'
+    	'node_modules/reframe.js/dist/jquery.reframe.min.js',
+    	'node_modules/textillate/jquery.textillate.js'
     ],
     css : []
 };
