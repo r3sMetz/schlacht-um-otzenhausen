@@ -13,6 +13,9 @@ const main = (() => {
 
 		// Page Tickets
 		if($('.page-tickets-content').length) pageTickets.setup();
+
+		// Text Animation
+		if($('.tlt').length) textAnimation.setup();
 	}
 
 	return {
