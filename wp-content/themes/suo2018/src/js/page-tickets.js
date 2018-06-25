@@ -1,7 +1,7 @@
 const pageTickets = (function(){
 	/** Private **/
 	const options = {
-		initial_time: document.referrer.includes(defaults.home_url) ? 10 : 5,
+		initial_time: cwoPoly.poly_includes(document.referrer,defaults.home_url) ? 10 : 5,
 		current_time: null,
 		secondInterface: $('#ticket_secs'),
 		currentInterval: null,
@@ -14,7 +14,7 @@ const pageTickets = (function(){
 			window.clearInterval(options.currentInterval);
 
 
-		let lastPage = document.referrer.includes(defaults.home_url) ? document.referrer : defaults.home_url;
+		let lastPage = cwoPoly.poly_includes(document.referrer,defaults.home_url) ? document.referrer : defaults.home_url;
 
 		fadeOverlay.show(true,()=>{window.location.href=lastPage});
 	}
