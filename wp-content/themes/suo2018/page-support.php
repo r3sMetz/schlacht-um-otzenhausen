@@ -1,0 +1,17 @@
+<?php
+//HTML Begin
+get_template_part('modules/html_begin');
+
+// Navbar Module
+get_template_part('modules/navbar');
+
+// Page Content
+get_template_part('partials/page-support/page-support_content');
+
+// Footer
+get_template_part('modules/footer');
+
+
+//HTML End
+get_template_part('modules/html_end');
+
