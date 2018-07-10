@@ -9,3 +9,6 @@
         </ul>
     </div>
 </footer>
+<span id="privacy_imprint"  class="text-center text-md-left">
+    <a class="text-light fadeLink" href="<?=get_permalink(14);?>">Impressum</a>&nbsp;|&nbsp;<a class="text-light fadeLink" href="<?php echo get_permalink(175);?>">Datenschutz</a>
+</span>
