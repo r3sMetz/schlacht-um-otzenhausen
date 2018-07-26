@@ -9,24 +9,10 @@
 
 		<!-- The Form -->
 		<div class="row">
-		<div class="col-md-6">
-		<form action="#">
-			<div class="form-row">
-				<input type="text" class="form-control" name="prename" required placeholder="Vorname">
-				<input type="text" class="form-control" name="name" required placeholder="Nachname">
-			</div>
-			<div class="form-row">
-				<input type="text" class="form-control" name="street" required placeholder="Straße">
-				<input type="text" class="form-control" name="nr" required placeholder="Hausnummer">
-			</div>
-			<div class="form-row">
-				<input type="text" class="form-control" name="plz" required placeholder="PLZ">
-				<input type="text" class="form-control" name="ort" required placeholder="Ort">
-			</div>
-			<div class="form-row">
-				<input type="submit" class="btn btn-secondary" value="Los!">
-			</div>
-		</form>
+		<div class="col-md-6 bg-light">
+		    <pre>
+                <?php print_r(get_option('cwo_supporters'));?>
+            </pre>
 		</div>
 		</div>
 	</div>

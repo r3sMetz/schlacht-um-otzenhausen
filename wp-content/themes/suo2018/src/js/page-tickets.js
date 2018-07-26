@@ -5,7 +5,8 @@ const pageTickets = (function(){
 		current_time: null,
 		secondInterface: $('#ticket_secs'),
 		currentInterval: null,
-		shopLink: 'https://www.eventim-light.com/de/shop/5ade289e082b0004ef9a0274/de/index'
+		shopLink: 'https://www.eventim-light.com/de/shop/5ade289e082b0004ef9a0274/de/index',
+		eventTim: 'https://www.eventim.de/tickets.html?affiliate=EVE&doc=artistPages%2Ftickets&fun=artist&action=tickets&erid=2198273&includeOnlybookable=true&x10=1&x11=Schlacht%20um%20Otze'
 	};
 
 	function abort(){
@@ -19,10 +20,10 @@ const pageTickets = (function(){
 		fadeOverlay.show(true,()=>{window.location.href=lastPage});
 	}
 
-	function goToPage() {
+	function goToPage(direct=false) {
 		window.clearInterval(options.currentInterval);
 		fadeOverlay.show(true, () => {
-			window.location.href = options.shopLink
+			window.location.href = direct ? options.eventTim : options.shopLink
 		});
 	}
 
@@ -35,6 +36,7 @@ const pageTickets = (function(){
 		// Click Events
 		$('#abort_ticket').on('click',abort);
 		$('#catchUp').on('click',goToPage);
+		$('#catchUpDirect').on('click',()=>goToPage(true));
 
 		// Start Interval
 		options.currentInterval = setInterval(()=>{
