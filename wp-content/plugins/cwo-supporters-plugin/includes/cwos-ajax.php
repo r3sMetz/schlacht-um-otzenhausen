@@ -49,6 +49,7 @@ function cwosHandleForm() {
 			// Update Array and Push it to DB
 			array_push( $all_supporters, $newSupporter );
 			update_option( 'cwo_supporters', json_encode( $all_supporters ) );
+			send_cwos_notification($newSupporter["name"]);
 
 			// Response
 			$response = array(
@@ -91,4 +92,12 @@ function cwos_check_if_not_exist( $new, $all ) {
 	}
 
 	return true;
+}
+
+// Notifaction Mail
+function send_cwos_notification($name) {
+	$to = "saschametz1988@web.de";
+	$subject = "Neuer SUO Supporter";
+	$message = $name." hat sich als Supporter eingetragen";
+	wp_mail($to,$subject,$message);
 }
