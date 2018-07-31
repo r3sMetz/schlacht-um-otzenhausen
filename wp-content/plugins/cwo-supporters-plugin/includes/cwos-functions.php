@@ -10,6 +10,9 @@ function cwos_create_admin_slug(){
 
 function cwos_get_supporters($raw = false){
 	$all_supporter = json_decode(get_option('cwo_supporters'),true);
+	if(!$all_supporter)
+		$all_supporter = array();
+	file_put_contents('all.txt',print_r($all_supporter,true));
 	$categorized_supporter = array('done'=>array(),'open'=>array());
 
 	if(!$raw) {

@@ -15,6 +15,7 @@ define( 'CWOS_PLUGINFILE', 'cwo-supporters-plugin.php' );
 require( __DIR__ . '/includes/cwos-functions.php' );
 
 // Initialize at activation
+register_activation_hook(__FILE__,'cwos_initialize_at_activation');
 
 // Set Ajax
 require(__DIR__.'/includes/cwos-ajax.php');
