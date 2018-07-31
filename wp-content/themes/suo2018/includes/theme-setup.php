@@ -27,7 +27,7 @@ function theme_scripts(){
         //'page_id'                => get_the_ID(),
         //'template_directory_uri' => get_template_directory_uri(),
         //'template_directory'     => get_template_directory(),
-        //'ajax_url'               => admin_url('admin-ajax.php'),
+        'ajaxurl'               => admin_url('admin-ajax.php'),
     ));
     wp_enqueue_script('scripts');
 }
