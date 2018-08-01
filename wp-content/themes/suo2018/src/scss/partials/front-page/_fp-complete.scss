@@ -63,7 +63,10 @@
 .fp-footer{
   position: fixed;
   width: 100%;
-  bottom: 10vh;
+  bottom: 7vh;
+  @include media-breakpoint-up(md){
+    bottom: 10vh;
+  }
   @include media-breakpoint-up(lg){
     position: static;
     height: 17vh;
