@@ -63,7 +63,10 @@
 .fp-footer{
   position: fixed;
   width: 100%;
-  bottom: 6vh;
+  bottom: 17vh;
+  @include media-breakpoint-up(md){
+    bottom: 10vh;
+  }
   @include media-breakpoint-up(lg){
     position: static;
     height: 17vh;
@@ -74,13 +77,42 @@
   }
 }
 
+.suo_footer_btm{
+  padding: 15px;
+}
+
 #privacy_imprint{
   width: 100%;
   opacity: .75;
-  padding: 5px;
-  position: fixed;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+}
+
+#metalde{
+  right: 0;
+  bottom: 40px;
+  width: 100%;
+
+  img{
+    max-width: 120px;
+    height: auto;
+    @include media-breakpoint-up(md){
+      max-width: 150px;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    bottom: 0;
+    width: auto;
+  }
+  @include media-breakpoint-up(lg){
+    top: 0;
+    bottom: auto;
+  }
+  @include media-breakpoint-up(xl){
+    top: auto;
+    bottom: 0;
+  }
 }
 
 @keyframes floating {
