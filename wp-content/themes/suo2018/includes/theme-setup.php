@@ -6,7 +6,7 @@ function theme_styles(){
     // Plugins
     //wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.css');
     // Custom Styles
-    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.1');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.2');
         $bg = get_field('hintergrundbild','options');
 	    wp_add_inline_style('styles','body{background-image:url('.$bg['url'].')}');
 }
