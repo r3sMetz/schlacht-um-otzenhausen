@@ -11,9 +11,9 @@
 </footer>
 
 <!-- Privacy + Imprint -->
-<span id="privacy_imprint" class="text-center text-md-left position-fixed suo_footer_btm">
+<nav id="privacy_imprint" class="text-center text-md-left position-fixed suo_footer_btm">
     <a class="text-light fadeLink" href="<?=get_permalink(14);?>">Impressum</a>&nbsp;|&nbsp;<a class="text-light fadeLink" href="<?php echo get_permalink(175);?>">Datenschutz</a>
-</span>
+</nav>
 
 <!-- metal.de -->
 <a href="https://www.metal.de/" target="_blank" id="metalde" class="position-fixed suo_footer_btm">
