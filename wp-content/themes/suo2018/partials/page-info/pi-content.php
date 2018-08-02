@@ -1,8 +1,8 @@
-<div class="section">
+<main>
 	<div class="container">
 		<div class="row mb-3">
 		    <!-- FAQ -->
-			<div class="col-md-6">
+			<section class="col-md-6">
 				<h2 class="underlined">FAQ</h2>
 				<?while(have_rows('faq')):the_row();?>
 				    <div class="faq_question mb-4">
@@ -10,21 +10,21 @@
                         <?the_sub_field('antwort');?>
                     </div>
 				<?endwhile;?>
-			</div>
+			</section>
             <!-- Posts -->
 			<div class="col-md-6">
                 <div class="row">
-                    <div class="col-12">
+                    <article class="col-12">
 						<? $last_post = get_last_news(); ?>
-                        <h2 class="underlined">News</h2>
-                        <p class="mb-0 text-muted"><?= date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</p>
+                        <header><h2 class="underlined">News</h2></header>
+                        <div class="mb-0 text-muted"><?= date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</div>
 						<?= wpautop( $last_post->post_content ); ?>
-                    </div>
+                    </article>
                 </div>
                 <!-- Downloads -->
                 <?if(have_rows('downloads_bearbeiten')):?>
                     <div class="row">
-                        <div class="col-12">
+                        <section class="col-12">
                             <h2 class="underlined">Downloads</h2>
                             <?php foreach(get_field('downloads_bearbeiten') as $download):?>
                                 <a href="<?=$download['download'];?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
@@ -36,21 +36,21 @@
                                     <i class="fa fa-download"></i> Running Order
                                 </a>
                             <?php endif;?>
-                        </div>
+                        </section>
                     </div>
                 <?php endif;?>
 			</div>
 		</div>
 		<!-- Videos -->
 		<div class="row">
-			<div class="col-md-6">
-				<h2 class="underlined"><?the_field('video_1_headline');?></h2>
+			<article class="col-md-6">
+				<header><h2 class="underlined"><?the_field('video_1_headline');?></h2></header>
 				<?=clean_iframe(get_field('video_1'));?>
-			</div>
-			<div class="col-md-6">
-				<h2 class="underlined"><?the_field('video2_headline');?></h2>
+			</article>
+			<article class="col-md-6">
+				<header><h2 class="underlined"><?the_field('video2_headline');?></h2></header>
 				<?=clean_iframe(get_field('video_2'));?>
-			</div>
+			</article>
 		</div>
 	</div>
-</div>
+</main>
