@@ -1,4 +1,4 @@
-<div class="container h-100 text-center d-flex justify-content-center align-items-center page-tickets-content">
+<main class="container h-100 text-center d-flex justify-content-center align-items-center page-tickets-content">
 	<div class="row">
 		<div class="col-12">
 			<h1>Schlacht um Otzenhausen - Tickets</h1>
@@ -8,4 +8,4 @@
 			<button class="btn btn-secondary catchUp" id="catchUpDirect" title="Eventim Veranstaltung">Direkt zu Eventim</button>
 		</div>
 	</div>
-</div>
+</main>
