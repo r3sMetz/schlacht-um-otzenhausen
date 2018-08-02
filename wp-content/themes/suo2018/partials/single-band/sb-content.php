@@ -1,4 +1,4 @@
-<div class="container sb-content">
+<main class="container sb-content">
     <!-- Bandlogo -->
     <div class="row mb-5">
         <div class="col-md-12 mx-auto text-center">
@@ -19,7 +19,7 @@
             <?the_content();?>
         </div>
         <?endif;?>
-        <div class="col-sm-5 col-lg-4<?if(get_the_content() != '')echo' text-md-right';?>">
+        <aside class="col-sm-5 col-lg-4<?if(get_the_content() != '')echo' text-md-right';?>">
             <ul class="list-unstyled d-inline-block  text-left sb-content-list">
             <?foreach(get_field('links') as $link):?>
                 <li class="mb-2">
@@ -32,11 +32,11 @@
                 </li>
             <?php endforeach;?>
             </ul>
-        </div>
+        </aside>
     </div>
     <div class="row">
         <div class="col-12 mt-2 mb-2">
             <a role="button" href="<?=get_permalink(10);?>" class="fadeLink btn btn-secondary">Zurück zur Übersicht</a>
         </div>
     </div>
-</div>
+</main>
