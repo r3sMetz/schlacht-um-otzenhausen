@@ -15,6 +15,7 @@ const cleanCss      = require('gulp-clean-css');
 const livereload    = require('gulp-livereload');
 const uglify        = require('gulp-uglify');
 const babel 		= require('gulp-babel');
+const imagemin		= require('gulp-imagemin');
 
 
 const processors = [
@@ -69,6 +70,13 @@ gulp.task('plugins', () =>{
 });
 
 
+gulp.task('images',()=>{
+	gulp.src('assets/img/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('assets/img'))
+});
+
+
 
 
 gulp.task('watch', () => {
@@ -80,4 +88,4 @@ gulp.task('watch', () => {
     gulp.src('assets/css/*.css').pipe(watch('assets/css/*.css')).pipe(livereload());
 });
 
-gulp.task('default', ['sass', 'compress', 'plugins']);
+gulp.task('default', ['sass', 'compress', 'plugins','images']);

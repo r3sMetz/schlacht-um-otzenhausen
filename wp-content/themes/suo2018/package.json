@@ -26,5 +26,8 @@
     "postcss-flexbugs-fixes": "^3.3.0",
     "reframe.js": "^2.2.1",
     "textillate": "^0.4.1"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0"
   }
 }
