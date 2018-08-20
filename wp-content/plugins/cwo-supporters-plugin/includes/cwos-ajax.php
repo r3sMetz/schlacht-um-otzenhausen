@@ -96,7 +96,8 @@ function cwos_check_if_not_exist( $new, $all ) {
 
 // Notifaction Mail
 function send_cwos_notification($name) {
-	$to = "tanja.blueflash@gmx.de";
+	// $to = "tanja.blueflash@gmx.de";
+	$to = "mathias.dahmen@gmx.de";
 	$subject = "Neuer SUO Supporter";
 	$message = $name." hat sich als Supporter eingetragen";
 	wp_mail($to,$subject,$message);
