@@ -23,7 +23,7 @@ const pageTickets = (function(){
 	function goToPage(direct=false) {
 		window.clearInterval(options.currentInterval);
 		fadeOverlay.show(true, () => {
-			window.location.href = direct ? options.eventTim : options.shopLink
+			window.location.href = direct === true ? options.eventTim : options.shopLink
 		});
 	}
 
