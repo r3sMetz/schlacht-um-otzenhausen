@@ -6,7 +6,7 @@ function theme_styles(){
     // Plugins
     //wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.css');
     // Custom Styles
-    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.4');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.5');
         $bg = get_field('hintergrundbild','options');
 	    wp_add_inline_style('styles','body{background-image:url('.$bg['url'].')}');
 }
@@ -21,7 +21,7 @@ function theme_scripts(){
 	wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.min.js',null,null,true);
 
     // Custom Script
-    wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts.min.v2.js',null,null,true);
+    wp_register_script('scripts', get_template_directory_uri() . '/assets/js/scripts.min.v2.js',null,'1.0.1',true);
     wp_localize_script('scripts','defaults',array(
         'home_url'               => home_url(),
         //'page_id'                => get_the_ID(),

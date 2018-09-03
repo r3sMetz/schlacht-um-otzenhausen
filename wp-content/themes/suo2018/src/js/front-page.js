@@ -23,5 +23,3 @@ const frontPage = (() => {
 		setup : setup
 	}
 })();
-
-window.onpageshow = fadeOverlay.pageShow;

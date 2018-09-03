@@ -23,3 +23,5 @@ const main = (() => {
 	}
 })();
 $(document).ready(main.setup);
+
+window.onpageshow = fadeOverlay.pageShow;

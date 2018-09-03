@@ -21,16 +21,7 @@ var fadeOverlay = (function(window,document){
 
     //onpageshow Event
     function setOnPageShowEvent(){
-        if(($('.globalHeaderImage').length)){
-            if(headImage.status.headImageInit) {
-                fadeOverlay.hide();
-            }
-            else
-                setTimeout(setOnPageShowEvent,100);
-        }
-        else {
-            fadeOverlay.hide();
-        }
+		fadeOverlay.hide();
     }
 
     //Click Elements
