@@ -34,7 +34,7 @@
             <div class="col-12">
                 <input type="checkbox" name="check_dsgvo" id="check_dsgvo" class="mr-2" required>
                 <label for="check_dsgvo">
-                    Ich habe die <a href="<?php echo get_permalink( 175 ); ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert
+                    Ich habe die <a target="_blank" href="<?php echo get_permalink( 175 ); ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert
                 </label>
             </div>
         </div>
