@@ -7,8 +7,7 @@ function theme_styles(){
     //wp_enqueue_style('plugins', get_template_directory_uri() . '/assets/css/plugins.css');
     // Custom Styles
     wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,'1.1.5');
-        $bg = get_field('hintergrundbild','options');
-	    wp_add_inline_style('styles','body{background-image:url('.$bg['url'].')}');
+	    wp_add_inline_style('styles',get_body_inline_styles());
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 
@@ -43,5 +42,20 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 //function myplugin_remove_type_attr($tag, $handle) {
 //    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
 //}
+
+/**
+ * Build inline Styles for Body
+ */
+ function get_body_inline_styles(){
+ 	// Get Background Images (Mobile + Desktop) from Options
+ 	$bg = get_field('hintergrundbild','options');
+    $bg_mob = get_field('hintergrundbild_mobil','options');
+
+    // Build inline Styles
+    $inline_style  = 'body{background-image:url('.$bg_mob['url'].')}';
+    $inline_style .= '@media screen and (min-width: 768px){body{background-image:url('.$bg['url'].')}}';
+
+    return $inline_style;
+ }
 
 
