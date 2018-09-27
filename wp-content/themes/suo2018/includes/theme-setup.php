@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 
 /**
- * Add all minified scripts
+ * Add all minified scripts for theme
  */
 function theme_scripts(){
     // Plugins
