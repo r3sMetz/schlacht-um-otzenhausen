@@ -87,7 +87,10 @@ $table_prefix  = 'cwo_suoWP_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+//PHP Tracking
 define( 'WP_SENTRY_DSN', 'https://059b37d864154f8cab3fdf40bdcfced0@sentry.io/1292820' );
+//JS Tracking
+define( 'WP_SENTRY_PUBLIC_DSN', 'https://059b37d864154f8cab3fdf40bdcfced0@sentry.io/1292820' );
 
 /* Das war’s, Schluss mit dem Bearbeiten! Viel Spaß beim Bloggen. */
 /* That's all, stop editing! Happy blogging. */
