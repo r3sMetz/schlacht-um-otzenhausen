@@ -8,7 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-lg-auto">
 	            <?php foreach(r3_getMenue('Hauptmenu',get_the_ID()) as $item):?>
-                    <a class="nav-item nav-link fadeLink<?php echo $item->active?' active':'';?>" href="<?php echo $item->url;?>"><?php echo $item->title;?></a>
+	                <?php if(!isset($item->dont_show)):?>
+                        <a
+                            class="nav-item nav-link fadeLink<?php echo $item->active?' active':'';?>"
+                            href="<?php echo $item->url;?>">
+                            <?php echo $item->title;?>
+                        </a>
+                    <?php endif;?>
                 <?php endforeach;?>
             </div>
         </div>
