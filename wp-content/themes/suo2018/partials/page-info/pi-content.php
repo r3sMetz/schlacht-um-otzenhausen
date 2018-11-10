@@ -17,8 +17,8 @@
                     <article class="col-12">
 						<?php $last_post = get_last_news(); ?>
                         <header><h2 class="underlined">News</h2></header>
-                        <div class="mb-0 text-muted"><?php echo  date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</div>
-						<?php echo  wpautop( $last_post->post_content ); ?>
+                        <div class="mb-0 text-muted"><?php echo date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</div>
+						<?php echo wpautop( $last_post->post_content ); ?>
                     </article>
                 </div>
                 <!-- Downloads -->
