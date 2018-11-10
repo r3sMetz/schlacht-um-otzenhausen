@@ -17,8 +17,8 @@
                     <article class="col-12">
 						<?php $last_post = get_last_news(); ?>
                         <header><h2 class="underlined">News</h2></header>
-                        <div class="mb-0 text-muted"><?= date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</div>
-						<?= wpautop( $last_post->post_content ); ?>
+                        <div class="mb-0 text-muted"><?php echo  date( 'd.m.Y', strtotime( $last_post->post_date ) ); ?>:</div>
+						<?php echo  wpautop( $last_post->post_content ); ?>
                     </article>
                 </div>
                 <!-- Downloads -->
@@ -27,12 +27,12 @@
                         <section class="col-12">
                             <h2 class="underlined">Downloads</h2>
                             <?php foreach(get_field('downloads_bearbeiten') as $download):?>
-                                <a href="<?=$download['download'];?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
-                                    <i class="fa fa-download"></i> <?=$download['name'];?>
+                                <a href="<?php echo $download['download'];?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
+                                    <i class="fa fa-download"></i> <?php echo $download['name'];?>
                                 </a>
                             <?php endforeach;?>
                             <?php if(file_exists(get_template_directory().'/assets/pdf/suo_running_order.pdf')):?>
-                                <a href="<?=get_template_directory_uri().'/assets/pdf/suo_running_order.pdf';?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
+                                <a href="<?php echo get_template_directory_uri().'/assets/pdf/suo_running_order.pdf';?>" class="btn btn-secondary btn-lg mb-1" target="_blank">
                                     <i class="fa fa-download"></i> Running Order
                                 </a>
                             <?php endif;?>
@@ -45,11 +45,11 @@
 		<div class="row">
 			<article class="col-md-6">
 				<header><h2 class="underlined"><?the_field('video_1_headline');?></h2></header>
-				<?=clean_iframe(get_field('video_1'));?>
+				<?php echo clean_iframe(get_field('video_1'));?>
 			</article>
 			<article class="col-md-6">
 				<header><h2 class="underlined"><?the_field('video2_headline');?></h2></header>
-				<?=clean_iframe(get_field('video_2'));?>
+				<?php echo clean_iframe(get_field('video_2'));?>
 			</article>
 		</div>
 	</div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?bloginfo('name');?> | <?=!is_front_page() ? get_the_title() : 'Startseite';?></title>
+    <title><?bloginfo('name');?> | <?php echo !is_front_page() ? get_the_title() : 'Startseite';?></title>
     <?
         // Delete Script + Style types because w3c
         ob_start();

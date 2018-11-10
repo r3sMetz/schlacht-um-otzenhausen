@@ -7,8 +7,8 @@
 			<?php foreach ( $runningOrder['mainstage'] as $band ): ?>
 			    <?php if($band->post_status === 'publish'):?>
                 <article class="single_ro_band mb-4">
-                    <h3 class="h4 mb-0 text-secondary"><?= get_field( 'startzeit', $band->ID ); ?> - <?= get_field( 'endzeit', $band->ID ); ?> UHR</h3>
-                    <h4 class="h2"><?= get_the_title( $band->ID ); ?></h4>
+                    <h3 class="h4 mb-0 text-secondary"><?php echo  get_field( 'startzeit', $band->ID ); ?> - <?php echo  get_field( 'endzeit', $band->ID ); ?> UHR</h3>
+                    <h4 class="h2"><?php echo  get_the_title( $band->ID ); ?></h4>
                 </article>
                 <?php endif;?>
 			<?php endforeach; ?>
@@ -20,8 +20,8 @@
 			<?php foreach ( $runningOrder['clubstage'] as $band ): ?>
 			    <?php if($band->post_status === 'publish'):?>
                 <article class="single_ro_band mb-4">
-                    <h3 class="h4 text-secondary mb-0"><?= get_field( 'startzeit', $band->ID ); ?> - <?= get_field( 'endzeit', $band->ID ); ?> UHR</h3>
-                    <h4 class="h2"><?= get_the_title( $band->ID ); ?></h4>
+                    <h3 class="h4 text-secondary mb-0"><?php echo  get_field( 'startzeit', $band->ID ); ?> - <?php echo  get_field( 'endzeit', $band->ID ); ?> UHR</h3>
+                    <h4 class="h2"><?php echo  get_the_title( $band->ID ); ?></h4>
                 </article>
                 <?php endif;?>
 			<?php endforeach; ?>

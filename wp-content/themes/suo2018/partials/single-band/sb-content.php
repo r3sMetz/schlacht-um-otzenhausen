@@ -2,7 +2,7 @@
     <!-- Bandlogo -->
     <div class="row mb-5">
         <div class="col-md-12 mx-auto text-center">
-            <img src="<?=get_field('logo')['url'];?>" class="img-fluid" alt="<?the_title();?>">
+            <img src="<?php echo get_field('logo')['url'];?>" class="img-fluid" alt="<?the_title();?>">
         </div>
     </div>
 
@@ -23,10 +23,10 @@
             <ul class="list-unstyled d-inline-block  text-left sb-content-list">
             <?foreach(get_field('links') as $link):?>
                 <li class="mb-2">
-                    <a href="<?=$link['url'];?>" class="d-inline-block btn btn-secondary w-100" target="_blank">
-                    <i class="fa fa-<?=$link['type']['value'];?>"></i>
+                    <a href="<?php echo $link['url'];?>" class="d-inline-block btn btn-secondary w-100" target="_blank">
+                    <i class="fa fa-<?php echo $link['type']['value'];?>"></i>
                     <span>
-                    <?=$link['type']['value'] == 'globe' ? 'Website von '.notTooLongBandName(get_the_title()) : notTooLongBandName(get_the_title()).' auf '.$link['type']['label'];?>
+                    <?php echo $link['type']['value'] == 'globe' ? 'Website von '.notTooLongBandName(get_the_title()) : notTooLongBandName(get_the_title()).' auf '.$link['type']['label'];?>
                     </span>
                     </a>
                 </li>
@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="col-12 mt-2 mb-2">
-            <a role="button" href="<?=get_permalink(10);?>" class="fadeLink btn btn-secondary">Zurück zur Übersicht</a>
+            <a role="button" href="<?php echo get_permalink(10);?>" class="fadeLink btn btn-secondary">Zurück zur Übersicht</a>
         </div>
     </div>
 </main>
