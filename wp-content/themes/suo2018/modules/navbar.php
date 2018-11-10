@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-lg-auto">
-	            <?foreach(r3_getMenue('Hauptmenu',get_the_ID()) as $item):?>
+	            <?php foreach(r3_getMenue('Hauptmenu',get_the_ID()) as $item):?>
                     <a class="nav-item nav-link fadeLink<?php echo $item->active?' active':'';?>" href="<?php echo $item->url;?>"><?php echo $item->title;?></a>
                 <?php endforeach;?>
             </div>

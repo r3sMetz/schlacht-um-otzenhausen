@@ -4,12 +4,12 @@
 		    <!-- FAQ -->
 			<section class="col-md-6">
 				<h2 class="underlined">FAQ</h2>
-				<?while(have_rows('faq')):the_row();?>
+				<?php while(have_rows('faq')):the_row();?>
 				    <div class="faq_question mb-4">
-                        <h3 class="h4 mb-0"><?the_sub_field('frage');?></h3>
-                        <?the_sub_field('antwort');?>
+                        <h3 class="h4 mb-0"><?php the_sub_field('frage');?></h3>
+                        <?php the_sub_field('antwort');?>
                     </div>
-				<?endwhile;?>
+				<?php endwhile;?>
 			</section>
             <!-- Posts -->
 			<div class="col-md-6">
@@ -22,7 +22,7 @@
                     </article>
                 </div>
                 <!-- Downloads -->
-                <?if(have_rows('downloads_bearbeiten')):?>
+                <?php if(have_rows('downloads_bearbeiten')):?>
                     <div class="row">
                         <section class="col-12">
                             <h2 class="underlined">Downloads</h2>
@@ -44,11 +44,11 @@
 		<!-- Videos -->
 		<div class="row">
 			<article class="col-md-6">
-				<header><h2 class="underlined"><?the_field('video_1_headline');?></h2></header>
+				<header><h2 class="underlined"><?php the_field('video_1_headline');?></h2></header>
 				<?php echo clean_iframe(get_field('video_1'));?>
 			</article>
 			<article class="col-md-6">
-				<header><h2 class="underlined"><?the_field('video2_headline');?></h2></header>
+				<header><h2 class="underlined"><?php the_field('video2_headline');?></h2></header>
 				<?php echo clean_iframe(get_field('video_2'));?>
 			</article>
 		</div>

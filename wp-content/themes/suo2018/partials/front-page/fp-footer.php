@@ -3,9 +3,9 @@
 	<div class="tlt display-huge text-secondary font-heat">
         <ul class="tlt-texts list-unstyled d-none">
             <li><?php echo get_event_date();?></li>
-            <?foreach(get_field('werbeclaims','option') as $claim):?>
+            <?php foreach(get_field('werbeclaims','option') as $claim):?>
                 <li><?php echo $claim['claim'];?></li>
-            <?endforeach;?>
+            <?php endforeach;?>
         </ul>
     </div>
 </footer>

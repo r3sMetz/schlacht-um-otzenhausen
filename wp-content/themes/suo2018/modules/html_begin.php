@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?bloginfo('name');?> | <?php echo !is_front_page() ? get_the_title() : 'Startseite';?></title>
-    <?
+    <title><?php bloginfo('name');?> | <?php echo !is_front_page() ? get_the_title() : 'Startseite';?></title>
+    <?php
         // Delete Script + Style types because w3c
         ob_start();
         wp_head();
@@ -13,5 +13,5 @@
         echo preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $buffered_head);
     ?>
 </head>
-<body class="bg-std<?if(is_front_page())echo' front-page';?>">
+<body class="bg-std<?php if(is_front_page())echo' front-page';?>">
 <div id="fadeOverlay"></div>
