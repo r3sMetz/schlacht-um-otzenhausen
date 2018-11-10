@@ -1,6 +1,6 @@
 <?php
 //Enable Menues
-function register_splitklima_menues() {
+function register_suo_menues() {
     $menuArray = array(
         'hauptmenue' => __('Hauptmenue'),
         'untermenue' => __('Untermenue')
@@ -8,7 +8,7 @@ function register_splitklima_menues() {
 
     register_nav_menus($menuArray);
 }
-add_action('init','register_splitklima_menues');
+add_action('init','register_suo_menues');
 
 //Get Main Menu
 function r3_getMenue($menu,$id){
