@@ -23,7 +23,7 @@
             <ul class="list-unstyled d-inline-block  text-left sb-content-list">
             <?php foreach(get_field('links') as $link):?>
                 <li class="mb-2">
-                    <a href="<?php echo $link['url'];?>" class="d-inline-block btn btn-secondary w-100" target="_blank">
+                    <a href="<?php echo $link['url'];?>" class="d-inline-block btn btn-secondary w-100" rel="noopener" target="_blank">
                     <i class="fa fa-<?php echo $link['type']['value'];?>"></i>
                     <span>
                     <?php echo $link['type']['value'] == 'globe' ? 'Website von '.notTooLongBandName(get_the_title()) : notTooLongBandName(get_the_title()).' auf '.$link['type']['label'];?>
