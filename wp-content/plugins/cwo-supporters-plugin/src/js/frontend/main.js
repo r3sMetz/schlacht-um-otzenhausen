@@ -1,39 +1,41 @@
-const cowsAppFrontend = (function(){
-	function setup(){
-		const responseContainer = $('#user_response');
-		const submitButton = $('#cwos_submit_btn');
+const cowsAppFrontend = (function () {
+	function setup() {
+		const responseContainer = document.querySelector('#user_response');
+		const submitButton = document.querySelector('#cwos_submit_btn');
+		const theForm = document.querySelector('#cwos_form');
 
-		$('#cwos_form').on('submit',function(e){
-			// 1. Prevent Form from Submitting and set Form Constant
+		theForm.addEventListener('submit', function (e) {
+			// 1. Prevent Form from Submitting and set declare formData{}
 			e.preventDefault();
-			const theForm = $(this);
+			let formData={};
 
+			Array.from(theForm.elements).forEach(element => element.name ? formData[element.name] = element.value : null);
 
-			// 2. Send Data
-			const formData = {
-				'action': 'cwosHandleForm',
-				'formdata' : theForm.serializeArray()
-			};
-			$.post(defaults.ajaxurl, formData, response => {
+			fetch(defaults.ajaxurl, {
+				method: 'POST',
+				body: JSON.stringify(formData)
+			})
+				.then(response => response.json())
+				.then(response => {
+					responseContainer.innerHTML = response.message;
 
-				responseContainer.html(response.message);
+					if (response.success) {
+						responseContainer.classList.add('text-success');
+						submitButton.classList.add('d-none');
+					}
+					else
+						responseContainer.classList.add('text-danger');
 
-				if(response.success) {
-					responseContainer.addClass('text-success');
-					submitButton.addClass('d-none');
-				}
-				else
-					responseContainer.addClass('text-danger');
+					responseContainer.removeClass('d-none');
 
-				responseContainer.removeClass('d-none');
-
-				// 3. Clear Form on success
-				if(response.success)
-					theForm[0].reset();
-			});
+					// 3. Clear Form on success
+					if (response.success)
+						theForm[0].reset();
+				})
+				.catch(error => console.log(error));
 		})
 	}
 
 	return setup;
 })();
-document.addEventListener('DOMContentLoaded',cowsAppFrontend);
+document.addEventListener('DOMContentLoaded', cowsAppFrontend);
