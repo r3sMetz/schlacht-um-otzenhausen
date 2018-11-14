@@ -13,10 +13,15 @@ const cowsAppFrontend = (function () {
 
 			fetch(defaults.ajaxurl, {
 				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				action: 'cwosHandleForm',
 				body: JSON.stringify(formData)
 			})
 				.then(response => response.json())
 				.then(response => {
+					console.log(response);
 					responseContainer.innerHTML = response.message;
 
 					if (response.success) {
@@ -26,7 +31,7 @@ const cowsAppFrontend = (function () {
 					else
 						responseContainer.classList.add('text-danger');
 
-					responseContainer.removeClass('d-none');
+					responseContainer.classList.remove('d-none');
 
 					// 3. Clear Form on success
 					if (response.success)

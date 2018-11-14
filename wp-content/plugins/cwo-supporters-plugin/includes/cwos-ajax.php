@@ -34,6 +34,7 @@ function cwosHandleForm() {
 	// Build Data
 	header( 'Content-type: application/json' );
 	$formdata = $_POST['formdata'];
+	file_put_contents('formdata.txt',print_r($_POST,true));
 	if ( $formdata && $formdata[4]["value"]) {
 		http_response_code( 200 );
 		$all_supporters = cwos_get_supporters( true );
