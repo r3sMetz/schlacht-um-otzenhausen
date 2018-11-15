@@ -25,7 +25,7 @@ add_action( 'admin_enqueue_scripts', 'cwos_enqueue_admin_styles' );
 // Styles
 function cwos_enqueue_frontend_scripts( $hook ) {
 	// CWOS-Frontend-JS
-	wp_enqueue_script( 'cwos-frontend-js', dirname( plugin_dir_url( __FILE__ ) ) . '/assets/frontend_js/cwos-frontend.js',null,microtime(),true);
+	// wp_enqueue_script( 'cwos-frontend-js', dirname( plugin_dir_url( __FILE__ ) ) . '/assets/frontend_js/cwos-frontend.js',null,microtime(),true);
 }
 
 add_action( 'wp_enqueue_scripts', 'cwos_enqueue_frontend_scripts' );

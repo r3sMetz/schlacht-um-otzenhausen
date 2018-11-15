@@ -7,38 +7,22 @@ const cowsAppFrontend = (function () {
 		theForm.addEventListener('submit', function (e) {
 			// 1. Prevent Form from Submitting and set declare formData{}
 			e.preventDefault();
-			let formData={};
+			let formData = {};
 
 			Array.from(theForm.elements).forEach(element => element.name ? formData[element.name] = element.value : null);
 
-			fetch(defaults.ajaxurl, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				action: 'cwosHandleForm',
-				body: JSON.stringify(formData)
-			})
-				.then(response => response.json())
-				.then(response => {
-					console.log(response);
-					responseContainer.innerHTML = response.message;
+			formData.action = 'cwosHandleForm';
 
-					if (response.success) {
-						responseContainer.classList.add('text-success');
-						submitButton.classList.add('d-none');
-					}
-					else
-						responseContainer.classList.add('text-danger');
-
-					responseContainer.classList.remove('d-none');
-
-					// 3. Clear Form on success
-					if (response.success)
-						theForm[0].reset();
-				})
-				.catch(error => console.log(error));
-		})
+			const xhr = new XMLHttpRequest();
+			xhr.open('POST', defaults.ajaxurl);
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					console.log("Heyy")
+				}
+			};
+			xhr.send(JSON.stringify(formData));
+		});
 	}
 
 	return setup;
