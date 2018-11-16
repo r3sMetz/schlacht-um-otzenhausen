@@ -1,7 +1,6 @@
 const frontPage = (() => {
 	/** Private **/
 	function handleSquareClick({currentTarget}){
-		console.log("HandleSquere");
 		if (!currentTarget.classList.contains('off')) {
 			fadeOverlay.show(true, () => {
 				window.location.href = currentTarget.dataset.link;
@@ -10,7 +9,6 @@ const frontPage = (() => {
 	}
 
 	function setBodyHeight(){
-		console.log("BodyHeight");
 		document.querySelector('body').style.height = `${device.height}px`;
 	}
 
