@@ -1,6 +1,9 @@
 <?php
 //Composer
-require 'vendor/autoload.php';
+require('vendor/autoload.php');
+
+// Contstants
+require('includes/constants.php');
 
 // ACF Options Page
 require('includes/options_page.php');
