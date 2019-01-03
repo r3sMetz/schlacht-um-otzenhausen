@@ -10,4 +10,4 @@ if(ini_get('allow_url_fopen')){
 		$theme_version = isset($package_json_array['version']) ? $package_json_array['version'] : null;
 	}
 }
-define('SUO_THEME_VERSION',WP_ENV === 'live' ? $theme_version : microtime());
+define('SUO_THEME_VERSION',WP_ENV === 'production' ? $theme_version : microtime());
