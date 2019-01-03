@@ -1,13 +1,12 @@
 <footer class="text-center fp-footer">
-	<h3 class="d-none"><?php echo get_event_date();?></h3>
-	<div class="tlt display-huge text-secondary font-heat">
-        <ul class="tlt-texts list-unstyled d-none">
-            <li><?php echo get_event_date();?></li>
-            <?php foreach(get_field('werbeclaims','option') as $claim):?>
-                <li><?php echo $claim['claim'];?></li>
-            <?php endforeach;?>
-        </ul>
-    </div>
+	<h3 class="text-secondary h1"><?php echo get_event_date();?></h3>
+<!--	<div class="tlt display-huge text-secondary font-heat">-->
+<!--        <ul class="tlt-texts list-unstyled d-none">-->
+<!--            <li>--><?php //echo get_event_date();?><!--</li>-->
+<!--            --><?php //foreach(get_field('werbeclaims','option') as $claim):?>
+<!--                <li>--><?php //echo $claim['claim'];?><!--</li>-->
+<!--            --><?php //endforeach;?>
+<!--        </ul>-->
 </footer>
 
 <!-- Privacy + Imprint -->
