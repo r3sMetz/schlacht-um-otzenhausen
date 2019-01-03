@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col-12">
-            <h1 class="mb-0"><?php the_title();?><?php if(strtolower(get_field('land')) !== 'de'):?> <small>( <?php the_field('land');?> )</small><?endif;?></h1>
+            <h1 class="mb-0"><?php the_title();?><?php if(strtolower(get_field('land')) !== 'de'):?> <small>( <?php the_field('land');?> )</small><?php endif;?></h1>
             <h2 class="h3 mb-3"><?php the_field('genre');?> | <?php the_field('startzeit');?> Uhr | <?php the_field('buhne');?></h2>
         </div>
     </div>

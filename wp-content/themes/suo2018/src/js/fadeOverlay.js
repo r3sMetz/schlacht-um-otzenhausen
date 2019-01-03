@@ -1,22 +1,20 @@
-var fadeOverlay = (function(window,document){
+const fadeOverlay = (function(window,document){
 
     //@Desc: NormalCase: ShowFade Overlay->Go to href; Special Case for e.g. ShowFadeOverlay, submitForm on Same Page...
     function showFadeOverlay(aimAnchor,callback){
-        $('#fadeOverlay')
-            .css('display','block')
-            .animate({'opacity' : 1},500,function(){
-                if(typeof aimAnchor === 'string')
+    	const theOverlay = document.getElementById('fadeOverlay');
+    	theOverlay.classList.remove('hidden');
+
+    	theOverlay.addEventListener('transitionend',()=>{
+    		if(typeof aimAnchor === 'string')
                     window.location.href = aimAnchor;
                 else if(typeof aimAnchor === 'boolean')
                     callback();
-            });
-
+    	});
     }
 
     function hideFadeOverlay(){
-        $('#fadeOverlay').animate({'opacity' : 0},500,function(){
-            $(this).css('display','none');
-        })
+    	document.getElementById('fadeOverlay').classList.add('hidden');
     }
 
     //onpageshow Event
@@ -26,12 +24,12 @@ var fadeOverlay = (function(window,document){
 
     //Click Elements
     function setFadeLinkClickEvents() {
-        $('.fadeLink').on('click', function (event) {
-            event.preventDefault();
-            var aimAnchor = $(this).attr('href');
+    	Array.from(document.querySelectorAll('.fadeLink')).forEach(link => link.addEventListener('click', event => {
+    		event.preventDefault();
+            const aimAnchor = event.currentTarget.getAttribute('href');
 
             fadeOverlay.show(aimAnchor);
-        });
+    	}));
     }
 
 

@@ -6,22 +6,22 @@ const main = (() => {
 		fadeOverlay.setClickEvents();
 
 		// FrontPage
-		if($('.fp-content')) frontPage.setup();
+		if(document.querySelector('.fp-content')) frontPage.setup();
 
 		// Reframe Iframes
-		$('iframe').reframe();
+		reframe('iframe');
 
 		// Page Tickets
-		if($('.page-tickets-content').length) pageTickets.setup();
+		if(document.querySelector('.page-tickets-content')) pageTickets.setup();
 
 		// Text Animation
-		if($('.tlt').length) textAnimation.setup();
+		//if($('.tlt').length) textAnimation.setup();
 	}
 
 	return {
 		setup: setup
 	}
 })();
-$(document).ready(main.setup);
+document.addEventListener('DOMContentLoaded',main.setup);
 
 window.onpageshow = fadeOverlay.pageShow;

@@ -4,6 +4,7 @@ if(!get_field('bands_aktivieren','options')){
 	header('Location: ' . home_url(), true, 302);
 }
 
+
 //HTML Begin
 get_template_part('modules/html_begin');
 
