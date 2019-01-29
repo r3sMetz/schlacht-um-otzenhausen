@@ -16,6 +16,9 @@ add_action('wp_footer', 'theme_styles');
  * Add all minified scripts for theme
  */
 function theme_scripts(){
+    // Do not Load Block Library
+    wp_dequeue_style( 'wp-block-library' );
+
     // Plugins
 	wp_enqueue_script('plugins', get_template_directory_uri() . '/assets/js/plugins.min.js',null,SUO_THEME_VERSION,true);
 
