@@ -9,7 +9,7 @@ function theme_styles(){
     wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.css',null,SUO_THEME_VERSION);
 	    wp_add_inline_style('styles',get_body_inline_styles());
 }
-add_action('wp_enqueue_scripts', 'theme_styles');
+add_action('wp_footer', 'theme_styles');
 
 
 /**
