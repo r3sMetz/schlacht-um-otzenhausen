@@ -18,7 +18,6 @@
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
@@ -30,6 +29,7 @@
     "vanilla-lazyload": "^8.17.0"
   },
   "dependencies": {
+    "browser-sync": "^2.26.3",
     "gulp-imagemin": "^4.1.0"
   }
 }

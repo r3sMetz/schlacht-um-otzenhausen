@@ -12,10 +12,10 @@ const autoprefixer  = require('autoprefixer');
 const postcss       = require('gulp-postcss');
 const flexbugsfixes = require('postcss-flexbugs-fixes');
 const cleanCss      = require('gulp-clean-css');
-const livereload    = require('gulp-livereload');
 const uglify        = require('gulp-uglify');
 const babel 		= require('gulp-babel');
 const imagemin		= require('gulp-imagemin');
+const browserSync    = require('browser-sync').create();
 
 
 const processors = [
@@ -37,7 +37,8 @@ const paths = {
     	//'node_modules/letteringjs/jquery.lettering.js',
     	//'node_modules/textillate/jquery.textillate.js'
     ],
-    css : []
+    css : [],
+    watch: ['**/*.php','assets/js/*.js','assets/css/*.css']
 };
 
 gulp.task('sass',() =>{
@@ -81,12 +82,17 @@ gulp.task('images',()=>{
 
 
 gulp.task('watch', () => {
-    livereload({start: true});
+	browserSync.init({
+        proxy: "https://suo",
+        notify: false
+    });
+
+    // Compressing
     gulp.watch(paths.scss, ['sass']);
     gulp.watch(paths.scripts, ['compress']);
-    gulp.src(paths.php).pipe(watch(paths.php)).pipe(livereload());
-    gulp.src('assets/js/*.js').pipe(watch('assets/js/*.js')).pipe(livereload());
-    gulp.src('assets/css/*.css').pipe(watch('assets/css/*.css')).pipe(livereload());
+
+    // Reloeading
+    gulp.watch(paths.watch,browserSync.reload);
 });
 
 gulp.task('default', ['sass', 'compress', 'plugins','images']);
