@@ -1,5 +1,9 @@
 .single_band{
   width: 100%;
+  img{
+    width: 100%;
+    height: auto;
+  }
 }
 .pb_headliners{
   @include media-breakpoint-up(md){

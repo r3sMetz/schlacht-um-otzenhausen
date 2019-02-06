@@ -22,3 +22,11 @@ function notTooLongBandName($bandname){
 		return $bandname;
 	}
 }
+
+function getMiniAndNormalImage($fieldname,$page_id){
+	$acf_image_array = get_field($fieldname,$page_id);
+	return array(
+		'mini' => $acf_image_array['sizes']['mini-image'] ? $acf_image_array['sizes']['mini-image'] : $acf_image_array['url'],
+		'normal' =>  $acf_image_array['url']
+	);
+}
