@@ -11,6 +11,9 @@ const main = (() => {
 		// Reframe Iframes
 		reframe('iframe');
 
+		// LazyLoading
+		if(document.querySelector('.iam-lazy')) lazyLoading.setup();
+
 		// Page Tickets
 		if(document.querySelector('.page-tickets-content')) pageTickets.setup();
 
