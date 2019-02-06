@@ -26,7 +26,8 @@
     "jquery": "^3.3.1",
     "postcss-flexbugs-fixes": "^3.3.0",
     "reframe.js": "^2.2.1",
-    "textillate": "^0.4.1"
+    "textillate": "^0.4.1",
+    "vanilla-lazyload": "^8.17.0"
   },
   "dependencies": {
     "gulp-imagemin": "^4.1.0"
