@@ -5,7 +5,7 @@ function get_event_date(){
 }
 
 function clean_iframe($iframe){
-	return '<iframe width="640" height="360" src="'.$iframe.'" allowfullscreen></iframe>';
+	return '<iframe class="iam-lazy" width="640" height="360" data-src="'.$iframe.'" allowfullscreen></iframe>';
 }
 
 function notTooLongBandName($bandname){
