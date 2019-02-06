@@ -1,0 +1,12 @@
+img.iam-lazy:not(.loaded) {
+    //visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: rgba(black,.25);
+    filter: blur(20px);
+}
+
+iframe.iam-lazy:not(.loaded){
+  background: rgba(white,.25);
+  filter: blur(20px);
+}
