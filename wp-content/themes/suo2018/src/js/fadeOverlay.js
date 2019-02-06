@@ -20,6 +20,8 @@ const fadeOverlay = (function(window,document){
     //onpageshow Event
     function setOnPageShowEvent(){
 		fadeOverlay.hide();
+		// LazyLoading
+		if(document.querySelector('.iam-lazy')) lazyLoading.setup();
     }
 
     //Click Elements
