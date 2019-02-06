@@ -9,7 +9,7 @@
             <a href="<?php echo get_permalink($band->ID);?>" class="fadeLink">
                 <img
                     class="iam-lazy pb-link"
-                    data-src="<?php echo $logo_array['normal'];?>"
+                    data-src="<?php echo $logo_array['url'];?>"
                     alt="<?php echo $band->post_title;?>">
             </a>
         </article>
@@ -25,7 +25,7 @@
             <a href="<?php echo get_permalink($band->ID);?>" class="fadeLink">
                 <img
                     class="iam-lazy pb-link"
-                    data-src="<?php echo $logo_array['normal'];?>"
+                    data-src="<?php echo $logo_array['url'];?>"
                     alt="<?php echo $band->post_title;?>">
             </a>
         </article>

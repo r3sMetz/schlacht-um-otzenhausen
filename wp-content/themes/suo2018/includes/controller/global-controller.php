@@ -25,10 +25,8 @@ function notTooLongBandName($bandname){
 
 function getMiniAndNormalImage($fieldname,$page_id){
 	$acf_image_array = get_field($fieldname,$page_id);
-	file_put_contents('mini.txt',print_r($acf_image_array,true));
 	return array(
 		'padding-bottom' => intval($acf_image_array['height'] / intval($acf_image_array['width'])*100)."%",
-		'mini' => $acf_image_array['sizes']['mini-image'] ? $acf_image_array['sizes']['mini-image'] : $acf_image_array['url'],
-		'normal' =>  $acf_image_array['url']
+		'url' =>  $acf_image_array['url']
 	);
 }
