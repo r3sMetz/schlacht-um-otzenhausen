@@ -5,6 +5,9 @@ const main = (() => {
 		// FadeOverlay
 		fadeOverlay.setClickEvents();
 
+		// Navbar
+		if(document.querySelector('.navbar')) navbar.setup();
+
 		// FrontPage
 		if(document.querySelector('.fp-content')) frontPage.setup();
 
