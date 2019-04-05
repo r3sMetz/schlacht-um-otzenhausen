@@ -6,12 +6,6 @@
   @media screen and (min-width: 1500px) {
     height: 20vh;
   }
-
-  /*h1{
-    animation: floating;
-    animation-duration: 10000ms;
-    animation-iteration-count: infinite;
-  }*/
 }
 .fp-content {
   // STD
@@ -94,39 +88,6 @@
     padding: 15px;
   }
 }
-
-#metalde{
-  right: 0;
-  top: 0;
-
-  img{
-    max-width: 50px;
-    height: auto;
-    @include media-breakpoint-up(md){
-      max-width: 120px;
-    }
-    @include media-breakpoint-up(xl){
-      max-width: 150px;
-    }
-  }
-  @include media-breakpoint-up(xl){
-    top: auto;
-    bottom: 0;
-  }
-}
-
-@keyframes floating {
-  0%{
-    color: $CWO_white
-  }
-  50%{
-    color: $CWO_darkRed
-  }
-  100%{
-    color: $CWO_white
-  }
-}
-
 
 // Todo: in Supporter Plugin übernehmen
 #supporter_banner{
