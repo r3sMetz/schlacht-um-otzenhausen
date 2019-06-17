@@ -5,8 +5,7 @@ const pageTickets = (function(){
 		current_time: null,
 		secondInterface: document.querySelector('#ticket_secs'),
 		currentInterval: null,
-		shopLink: 'https://www.eventim-light.com/de/shop/5ade289e082b0004ef9a0274/de/index',
-		eventTim: 'https://www.eventim.de/tickets.html?affiliate=EVE&doc=artistPages%2Ftickets&fun=artist&action=tickets&erid=2198273&includeOnlybookable=true&x10=1&x11=Schlacht%20um%20Otze'
+		shopLink: 'https://www.ticket-regional.de/events_info.php?eventID=159858',
 	};
 
 	function abort(){
@@ -21,10 +20,9 @@ const pageTickets = (function(){
 	}
 
 	function goToPage(direct=false) {
-		console.log("GoToPage");
 		window.clearInterval(options.currentInterval);
 		fadeOverlay.show(true, () => {
-			window.location.href = direct === true ? options.eventTim : options.shopLink
+			window.location.href = options.shopLink;
 		});
 	}
 
@@ -38,7 +36,6 @@ const pageTickets = (function(){
 		// Click Events
 		document.getElementById('abort_ticket').addEventListener('click',abort);
 		document.getElementById('catchUp').addEventListener('click',goToPage);
-		document.getElementById('catchUpDirect').addEventListener('click',()=>goToPage(true));
 
 		// Start Interval
 		options.currentInterval = setInterval(()=>{
